@@ -11,15 +11,13 @@ import { Link } from 'react-router-dom';
 import messages from './messages';
 
 export default function HomePage() {
-  const cor = <Link to="/courses">Courses</Link>;
-
   return (
-    <div>
+    <>
       <h1>
         <FormattedMessage {...messages.header} />
       </h1>
-
-      {cor}
-    </div>
+      <a href="test">Test</a>
+      <Link to="/about">About</Link>
+    </>
   );
 }
