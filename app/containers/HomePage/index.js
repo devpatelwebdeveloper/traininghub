@@ -10,21 +10,19 @@ import { FormattedMessage } from 'react-intl';
 // import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import messages from './messages';
-import BaseLink from '../../components/atoms/BaseLink/BaseLink';
-import BaseTile from '../../components/atoms/BaseTile/BaseTile';
-import EnhancedTiles from '../../components/molecules/EnhancedTiles/EnhancedTiles';
+import TopBanner from '../../components/organisms/TopBanner/TopBanner';
 import Tiles from '../../components/blocks/Tiles/Tiles';
+import Clients from '../../components/blocks/Clients/Clients';
 export default function HomePage() {
+  const Toptitle = <FormattedMessage {...messages.title} />;
+  const Subtitle = <FormattedMessage {...messages.subtitle} />;
   return (
-    <Container>
-      <Row>
-        <Col md={12}>
-          <h1>
-            <FormattedMessage {...messages.header} />
-          </h1>
-        </Col>
-      </Row>
-      <Tiles />
-    </Container>
+    <>
+      <TopBanner title={Toptitle} subtitle={Subtitle} />
+      <Clients />
+      <Container>
+        <Tiles />
+      </Container>
+    </>
   );
 }

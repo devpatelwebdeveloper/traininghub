@@ -4,24 +4,45 @@ import styled from 'styled-components';
 import BaseTile from '../../atoms/BaseTile/BaseTile';
 
 const CardType = styled.div`
-  border-radius: 3px;
+  border-radius: 8px;
   background-color: #fff;
-  background-color: #fff;
-
   border: 1px solid #d8d8d8;
   border-bottom-width: 2px;
   width: 100%;
   min-width: 300px;
-  padding: 8px;
+  min-height: 400px;
   margin-bottom: 3%;
+  overflow: hidden;
+  text-align: center;
+  a:hover {
+    color: #00aeef;
+  }
+  h4,
+  p {
+    padding: 8px;
+  }
 `;
 
 const ImgC = styled.div`
   position: relative;
-  height: 0;
+  height: 200px;
   width: 100%;
   overflow: hidden;
-  padding-top: 75.09%;
+  width: 100%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  &:hover {
+    width: 120%;
+    margin: 0 0 0 -10%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
 `;
 const ClearLine = styled.div`
   width: 100%;
