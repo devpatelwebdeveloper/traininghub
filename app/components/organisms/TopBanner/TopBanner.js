@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+import BaseTitle from '../../atoms/BaseTitle/BaseTitle';
 const Backgroundimage = 'https://unsplash.it/1500?random';
 
 const StyledContainer = styled.section`
@@ -46,8 +46,8 @@ export default class TopBanner extends React.PureComponent {
     return (
       <StyledContainer>
         <CenterContent>
-          <h1>{this.props.title}</h1>
-          <h3>{this.props.subtitle}</h3>
+          <BaseTitle title={this.props.title} size="H1" center />
+          <BaseTitle title={this.props.subtitle} size="H3" center />
         </CenterContent>
       </StyledContainer>
     );
