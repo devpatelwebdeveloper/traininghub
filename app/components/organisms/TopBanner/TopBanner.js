@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import BaseTitle from '../../atoms/BaseTitle/BaseTitle';
-const Backgroundimage = 'https://unsplash.it/1500?random';
 
 const StyledContainer = styled.section`
   background-size: cover;
@@ -10,7 +9,7 @@ const StyledContainer = styled.section`
   width: 100wh;
   height: 50vh;
   display: flex;
-
+  margin-top: -50px;
   overflow: hidden;
 `;
 

@@ -9,9 +9,9 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import HomePage from 'containers/HomePage/Loadable';
 import Courses from 'containers/Courses/Loadable';
+import SqlDeveloper from 'containers/CoursesSingle/SQLDeveloper/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import GlobalStyle from '../../global-styles';
@@ -21,7 +21,8 @@ export default function App() {
     <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/courses" component={Courses} />
+        <Route exact path="/courses" component={Courses} />
+        <Route path="/courses/sqldeveloper" component={SqlDeveloper} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
