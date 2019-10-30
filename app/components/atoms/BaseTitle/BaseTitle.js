@@ -59,7 +59,7 @@ export default class BaseTitle extends React.PureComponent {
 }
 
 BaseTitle.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.any.isRequired,
   size: PropTypes.string.isRequired,
   center: PropTypes.bool,
   underline: PropTypes.bool,

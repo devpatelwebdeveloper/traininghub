@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Col from 'react-bootstrap/Col';
 import styled from 'styled-components';
 import BaseTitle from '../../atoms/BaseTitle/BaseTitle';
@@ -61,6 +62,27 @@ const CardContent = styled.div`
 
 export default class BaseTile extends React.PureComponent {
   render() {
+    if (this.props.href) {
+      return (
+        <StyledCol md={4}>
+          <Link to={this.props.href}>
+            <Card>
+              <StyledImg
+                alt={this.props.alt}
+                title={this.props.alt}
+                src={this.props.image}
+              />
+              <CardContent>
+                <BaseTitle title={this.props.title} size="H6" />
+                <BaseTitle title={this.props.subtitle} size="H5" />
+
+                <h5 />
+              </CardContent>
+            </Card>
+          </Link>
+        </StyledCol>
+      );
+    }
     return (
       <StyledCol md={4}>
         <Card>
@@ -86,4 +108,5 @@ BaseTile.propTypes = {
   subtitle: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  href: PropTypes.string,
 };

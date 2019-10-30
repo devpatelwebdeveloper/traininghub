@@ -5,7 +5,6 @@ import BaseTitle from '../../atoms/BaseTitle/BaseTitle';
 const Backgroundimage = 'https://unsplash.it/1500?random';
 
 const StyledContainer = styled.section`
-  background-image: url(${Backgroundimage});
   background-size: cover;
   background-position: center;
   width: 100wh;
@@ -43,8 +42,11 @@ const CenterContent = styled.div`
 
 export default class TopBanner extends React.PureComponent {
   render() {
+    const sectionStyle = {
+      backgroundImage: `url(${this.props.background})`,
+    };
     return (
-      <StyledContainer>
+      <StyledContainer style={sectionStyle}>
         <CenterContent>
           <BaseTitle title={this.props.title} size="H1" center />
           <BaseTitle title={this.props.subtitle} size="H3" center />
@@ -57,4 +59,5 @@ export default class TopBanner extends React.PureComponent {
 TopBanner.propTypes = {
   title: PropTypes.any.isRequired,
   subtitle: PropTypes.any.isRequired,
+  background: PropTypes.string.isRequired,
 };

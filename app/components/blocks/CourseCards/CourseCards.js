@@ -19,6 +19,7 @@ export default function CourseCards() {
               subtitle={course.subtitle}
               image={course.image}
               alt={course.alt}
+              href={course.href}
             />
           ))}
         </Row>
@@ -33,6 +34,7 @@ const courses = [
     subtitle: 'Subtitle 1',
     image: 'https://www.hybridskill.com/courseimages/img78.jpg',
     alt: 'Alt 1',
+    href: 'courses',
   },
   {
     title: 'Title 2',

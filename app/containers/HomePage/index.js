@@ -21,7 +21,11 @@ export default function HomePage() {
   const Subtitle = <FormattedMessage {...messages.subtitle} />;
   return (
     <>
-      <TopBanner title={Toptitle} subtitle={Subtitle} />
+      <TopBanner
+        title={Toptitle}
+        subtitle={Subtitle}
+        background="https://unsplash.it/1500?random"
+      />
       <Clients />
       <section>
         <BaseTitle title="Heading test" size="H1" center underline />
