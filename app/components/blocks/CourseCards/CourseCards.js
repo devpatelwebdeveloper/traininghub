@@ -9,8 +9,6 @@ const Section = styled.section`
   margin: 50px auto;
 `;
 
-const id = 0;
-
 export default function CourseCards() {
   return (
     <Section>
