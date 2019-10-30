@@ -15,12 +15,14 @@ import Tiles from '../../components/blocks/Tiles/Tiles';
 import Clients from '../../components/blocks/Clients/Clients';
 import BaseTitle from '../../components/atoms/BaseTitle/BaseTitle';
 import CourseCards from '../../components/blocks/CourseCards/CourseCards';
+import Navigation from '../../components/organisms/Navigation/Navigation';
 import Footer from '../../components/organisms/Footer/Footer';
 export default function HomePage() {
   const Toptitle = <FormattedMessage {...messages.title} />;
   const Subtitle = <FormattedMessage {...messages.subtitle} />;
   return (
     <>
+      <Navigation />
       <TopBanner
         title={Toptitle}
         subtitle={Subtitle}
@@ -34,6 +36,7 @@ export default function HomePage() {
         </Container>
       </section>
       <CourseCards />
+
       <Footer />
     </>
   );

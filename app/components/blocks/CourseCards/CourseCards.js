@@ -3,18 +3,22 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import styled from 'styled-components';
 import CourseCard from '../../molecules/CourseCard/CourseCard';
+import { Courses } from '../../../contents/Courses';
 
 const Section = styled.section`
   margin: 50px auto;
 `;
+
+const id = 0;
 
 export default function CourseCards() {
   return (
     <Section>
       <Container>
         <Row>
-          {courses.map(course => (
+          {Courses.map(course => (
             <CourseCard
+              key={course.subtitle}
               title={course.title}
               subtitle={course.subtitle}
               image={course.image}
@@ -27,43 +31,3 @@ export default function CourseCards() {
     </Section>
   );
 }
-
-const courses = [
-  {
-    title: 'Title 1',
-    subtitle: 'Subtitle 1',
-    image: 'https://www.hybridskill.com/courseimages/img78.jpg',
-    alt: 'Alt 1',
-    href: 'courses',
-  },
-  {
-    title: 'Title 2',
-    subtitle: 'Subtitle 2',
-    image: 'https://www.hybridskill.com/courseimages/img78.jpg',
-    alt: '',
-  },
-  {
-    title: 'Title 3',
-    subtitle: 'Subtitle 3',
-    image: 'https://www.hybridskill.com/courseimages/img78.jpg',
-    alt: '',
-  },
-  {
-    title: 'Title 4',
-    subtitle: 'Subtitle 4',
-    image: 'https://www.hybridskill.com/courseimages/img78.jpg',
-    alt: '',
-  },
-  {
-    title: 'Title 5',
-    subtitle: 'Subtitle 5',
-    image: 'https://www.hybridskill.com/courseimages/img78.jpg',
-    alt: '',
-  },
-  {
-    title: 'Title 5',
-    subtitle: 'Subtitle 5',
-    image: 'https://www.hybridskill.com/courseimages/img78.jpg',
-    alt: '',
-  },
-];

@@ -17,7 +17,7 @@ export default function HomePage() {
         <FormattedMessage {...messages.header} />
       </h1>
       <Link to="/">Home</Link>
-      <a href="https://www.google.com">Google</a>
+      <Link to="/courses">Courses</Link>
     </>
   );
 }
